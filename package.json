@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm --filter playground dev"
+    "dev:playground": "pnpm --filter playground dev",
+    "build:playground": "pnpm --filter playground build"
   },
   "keywords": [],
   "author": "",
