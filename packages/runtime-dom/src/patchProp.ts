@@ -1,5 +1,6 @@
 import { RendererOptions } from "runtime-core";
 import { patchEvent } from "./modules/events";
+import {patchAttr} from "./modules/attrs";
 
 type DOMRendererOptions = RendererOptions<Node, Element>;
 
@@ -12,6 +13,6 @@ export const patchProp: DOMRendererOptions["patchProp"] = (el, key, value) => {
     patchEvent(el, key, value);
   } else {
     // Патчим аттрибуты
-    // patchAttr(el, key, value); // We will implement this later
+    patchAttr(el, key, value);
   }
 };
