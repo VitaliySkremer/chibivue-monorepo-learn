@@ -1,4 +1,4 @@
-import { RendererOptions } from "runtime-core";
+import { RendererOptions } from "@chibivue/runtime-core";
 import { patchEvent } from "./modules/events";
 import {patchAttr} from "./modules/attrs";
 

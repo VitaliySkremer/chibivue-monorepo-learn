@@ -1,4 +1,4 @@
-import { CreateAppFunction, createAppAPI, createRenderer } from "runtime-core";
+import { CreateAppFunction, createAppAPI, createRenderer } from "@chibivue/runtime-core";
 import { nodeOps } from "./nodeOps";
 import { patchProp } from "./patchProp";
 

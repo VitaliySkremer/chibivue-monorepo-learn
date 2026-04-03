@@ -27,18 +27,27 @@ importers:
 
   packages/chibivue:
     dependencies:
-      runtime-core:
+      '@chibivue/reactivity':
+        specifier: workspace:*
+        version: link:../reactivity
+      '@chibivue/runtime-core':
         specifier: workspace:*
         version: link:../runtime-core
-      runtime-dom:
+      '@chibivue/runtime-dom':
         specifier: workspace:*
         version: link:../runtime-dom
 
-  packages/runtime-core: {}
+  packages/reactivity: {}
+
+  packages/runtime-core:
+    dependencies:
+      '@chibivue/reactivity':
+        specifier: workspace:*
+        version: link:../reactivity
 
   packages/runtime-dom:
     dependencies:
-      runtime-core:
+      '@chibivue/runtime-core':
         specifier: workspace:*
         version: link:../runtime-core
 
