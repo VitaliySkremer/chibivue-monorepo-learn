@@ -1,0 +1,13 @@
+{
+  "name": "chibivue",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./index.ts",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "dependencies": {
+    "runtime-core": "workspace:*",
+    "runtime-dom": "workspace:*"
+  }
+}
