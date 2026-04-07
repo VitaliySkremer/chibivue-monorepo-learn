@@ -1,8 +1,9 @@
 import { createApp, h, reactive } from "chibivue";
 
-const app = createApp({
+const App = {
   setup() {
     const state = reactive({ count: 0 });
+    const value = reactive({ msg: "" });
 
     const increment = () => {
       state.count++;
@@ -21,10 +22,26 @@ const app = createApp({
               "background-color: teal; padding: 10px 15px; color: red; cursor: pointer;"
           },
           ["click me!"]
-        )
+        ),
+        h("div", {}, [
+          h("p", {}, [value.msg]),
+          h(
+            "input",
+            {
+              type: "text",
+              onInput: (e: Event) => {
+                value.msg = (e.target as HTMLInputElement).value;
+              },
+              value: value.msg
+            },
+            []
+          )
+        ])
       ]);
     };
   }
-});
+};
+
+const app = createApp(App);
 
 app.mount("#app");
